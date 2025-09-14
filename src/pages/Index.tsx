@@ -42,8 +42,8 @@ const Index = () => {
           <div className="text-center">
             <div className="mb-6">
               <img 
-                src="/img/022e928e-7337-4e3d-8f71-9dcc467a5c15.jpg" 
-                alt="Портрет" 
+                src="https://cdn.poehali.dev/files/7cee0d08-dadd-48ee-817d-53dd8cfb7e27.jpg"
+                alt="Николай Стефанович"
                 className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-slate-200 shadow-lg"
               />
             </div>
