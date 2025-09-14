@@ -13,6 +13,8 @@ const Index = () => {
     { id: 2, name: "Михаил Сидоров", message: "Помню его как замечательного человека. Покойся с миром.", date: "13.09.2025" }
   ]);
   
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+  
   const [newComment, setNewComment] = useState({ name: "", message: "" });
   
   const addComment = () => {
@@ -25,6 +27,14 @@ const Index = () => {
       }]);
       setNewComment({ name: "", message: "" });
     }
+  };
+
+  const nextPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
+  };
+
+  const prevPhoto = () => {
+    setCurrentPhotoIndex((prev) => (prev - 1 + photos.length) % photos.length);
   };
   
   const photos = [
@@ -118,16 +128,60 @@ const Index = () => {
             </h2>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {photos.map((photo, index) => (
-                <div key={index} className="aspect-square overflow-hidden rounded-lg border border-slate-200 hover:shadow-md transition-shadow">
-                  <img 
-                    src={photo} 
-                    alt={`Фото ${index + 1}`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
+            <div className="relative">
+              {/* Main Photo Display */}
+              <div className="aspect-[4/3] max-w-2xl mx-auto overflow-hidden rounded-lg border border-slate-200 shadow-lg">
+                <img 
+                  src={photos[currentPhotoIndex]} 
+                  alt={`Фото ${currentPhotoIndex + 1}`} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevPhoto}
+                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                disabled={photos.length <= 1}
+              >
+                <Icon name="ChevronLeft" size={24} />
+              </button>
+              
+              <button
+                onClick={nextPhoto}
+                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-slate-700 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+                disabled={photos.length <= 1}
+              >
+                <Icon name="ChevronRight" size={24} />
+              </button>
+
+              {/* Photo Counter */}
+              <div className="text-center mt-4 text-slate-600">
+                <span className="text-sm">
+                  {currentPhotoIndex + 1} из {photos.length}
+                </span>
+              </div>
+
+              {/* Thumbnail Navigation */}
+              <div className="flex justify-center gap-2 mt-4 overflow-x-auto pb-2">
+                {photos.map((photo, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentPhotoIndex(index)}
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg border-2 overflow-hidden transition-all duration-200 ${
+                      index === currentPhotoIndex 
+                        ? 'border-slate-500 ring-2 ring-slate-300' 
+                        : 'border-slate-200 hover:border-slate-400'
+                    }`}
+                  >
+                    <img 
+                      src={photo} 
+                      alt={`Миниатюра ${index + 1}`} 
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
           </CardContent>
         </Card>
