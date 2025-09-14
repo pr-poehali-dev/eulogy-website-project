@@ -41,7 +41,23 @@ const Index = () => {
     "/img/022e928e-7337-4e3d-8f71-9dcc467a5c15.jpg",
     "/img/240425e2-f6fa-453a-b069-9c2804c82818.jpg", 
     "/img/820444e3-3941-4520-bcaa-405f42bb920d.jpg",
-    "/placeholder.svg"
+    "https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=500",
+    "https://images.unsplash.com/photo-1516627145497-ae4050fb1bb3?w=500",
+    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500",
+    "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500",
+    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500",
+    "https://images.unsplash.com/photo-1520637836862-4d197d17c512?w=500",
+    "https://images.unsplash.com/photo-1463453091185-61582044d556?w=500",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500",
+    "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500",
+    "https://images.unsplash.com/photo-1542596768-5d1ddd3008a9?w=500",
+    "https://images.unsplash.com/photo-1546820389-44d77e1f3b31?w=500",
+    "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500",
+    "https://images.unsplash.com/photo-1520975954732-35dd22299614?w=500",
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500"
   ];
 
   return (
