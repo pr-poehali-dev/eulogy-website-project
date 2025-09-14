@@ -44,7 +44,7 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/7cee0d08-dadd-48ee-817d-53dd8cfb7e27.jpg"
                 alt="Николай Стефанович"
-                className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-slate-200 shadow-lg"
+                className="w-40 h-40 rounded-full mx-auto object-cover object-top border-4 border-slate-200 shadow-lg"
               />
             </div>
             <h1 className="text-4xl font-serif text-slate-800 mb-2">Николай Стефанович Бондарев</h1>
