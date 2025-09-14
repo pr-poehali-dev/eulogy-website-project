@@ -48,7 +48,7 @@ const Index = () => {
               />
             </div>
             <h1 className="text-4xl font-serif text-slate-800 mb-2">Николай Стефанович Бондарев</h1>
-            <p className="text-slate-600 text-lg mb-4">15 мая 1935 год — 22 апреля 2014 год</p>
+            <p className="text-slate-600 text-lg mb-4">15 мая 1935 года — 22 апреля 2014 года</p>
             <div className="flex items-center justify-center gap-2 text-slate-500">
               <Icon name="Heart" size={20} />
               <span className="italic">"В памяти наших сердец навсегда"</span>
